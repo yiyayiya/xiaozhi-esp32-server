@@ -174,3 +174,6 @@ main/xiaozhi-server/mysql
 uploadfile
 *.json
 .vscode
+
+
+main/manager-web/Miniconda3-latest-Linux-x86_64.sh
