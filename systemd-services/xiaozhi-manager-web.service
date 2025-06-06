@@ -1,0 +1,25 @@
+[Unit]
+Description=XiaoZhi Manager Web Service
+After=network.target xiaozhi-manager-api.service
+Wants=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/workspaces/xiaozhi-esp32-server/main/manager-web
+Environment=NODE_ENV=production
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/node:/usr/local/bin/npm
+
+ExecStart=/usr/bin/npm run serve
+ExecStop=/bin/kill -TERM $MAINPID
+
+# 自动重启配置
+Restart=always
+RestartSec=10
+
+# 输出日志
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

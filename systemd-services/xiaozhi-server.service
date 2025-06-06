@@ -1,0 +1,29 @@
+[Unit]
+Description=XiaoZhi Server Service
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/workspaces/xiaozhi-esp32-server/main/xiaozhi-server
+
+# Conda环境设置
+Environment=PATH=/root/miniconda3/envs/xiaozhi-esp32-server/bin:/root/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Environment=CONDA_DEFAULT_ENV=xiaozhi-esp32-server
+Environment=CONDA_PREFIX=/root/miniconda3/envs/xiaozhi-esp32-server
+Environment=CONDA_SHLVL=1
+
+ExecStart=/root/miniconda3/envs/xiaozhi-esp32-server/bin/python app.py
+ExecStop=/bin/kill -TERM $MAINPID
+
+# 自动重启配置
+Restart=always
+RestartSec=10
+
+# 输出日志
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

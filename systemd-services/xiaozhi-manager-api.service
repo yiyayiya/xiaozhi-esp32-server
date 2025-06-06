@@ -1,0 +1,28 @@
+[Unit]
+Description=XiaoZhi Manager API Service
+After=network.target docker.service
+Wants=network.target
+Requires=docker.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/workspaces/xiaozhi-esp32-server/main/manager-api
+Environment=JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-21-openjdk-amd64/bin
+
+# 启动前先启动Redis
+ExecStartPre=/usr/bin/docker start xiaozhi-esp32-server-redis
+ExecStart=/usr/bin/mvn spring-boot:run
+ExecStop=/bin/kill -TERM $MAINPID
+
+# 自动重启配置
+Restart=always
+RestartSec=10
+
+# 输出日志
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
