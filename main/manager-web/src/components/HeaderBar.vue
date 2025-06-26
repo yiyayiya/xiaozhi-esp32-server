@@ -3,8 +3,7 @@
     <div class="header-container">
       <!-- 左侧元素 -->
       <div class="header-left" @click="goHome">
-        <img loading="lazy" alt="" src="@/assets/xiaozhi-logo.png" class="logo-img" />
-        <img loading="lazy" alt="" src="@/assets/xiaozhi-ai.png" class="brand-img" />
+        <span class="llmtoy-logo">LLMToy</span>
       </div>
 
       <!-- 中间导航菜单 -->
@@ -362,6 +361,14 @@ export default {
 
 .el-icon-arrow-down {
   transition: transform 0.3s ease;
+}
+
+.llmtoy-logo {
+  font-weight: bold;
+  color: #5b7cff;
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-family: "Arial Black", Arial, sans-serif;
 }
 
 /* 响应式调整 */

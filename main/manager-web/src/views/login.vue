@@ -3,8 +3,7 @@
     <el-container style="height: 100%;">
       <el-header>
         <div style="display: flex;align-items: center;margin-top: 15px;margin-left: 10px;gap: 10px;">
-          <img loading="lazy" alt="" src="@/assets/xiaozhi-logo.png" style="width: 45px;height: 45px;" />
-          <img loading="lazy" alt="" src="@/assets/xiaozhi-ai.png" style="height: 18px;" />
+          <span class="llmtoy-logo">LLMToy</span>
         </div>
       </el-header>
       <div class="login-person">
@@ -242,5 +241,13 @@ export default {
     background-color: #3d5cd6;
     border-color: #3d5cd6;
   }
+}
+
+.llmtoy-logo {
+  font-weight: bold;
+  color: #5b7cff;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-family: "Arial Black", Arial, sans-serif;
 }
 </style>
