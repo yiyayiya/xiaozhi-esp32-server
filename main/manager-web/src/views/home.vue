@@ -5,9 +5,24 @@
     <el-main style="padding: 20px;display: flex;flex-direction: column;">
       <div>
         <!-- 首页内容 -->
-        <div class="add-device">
-          <div class="add-device-bg">
-            <div class="hellow-text" style="margin-top: 30px;">
+
+           <div class="add-device-btn">
+              <div class="left-add" @click="showAddDialog">
+                添加智能体
+              </div>
+              <div style="width: 23px;height: 13px;background: #5778ff;margin-left: -10px;" />
+              <div class="right-add">
+                <i class="el-icon-right" @click="showAddDialog" style="font-size: 20px;color: #fff;" />
+              </div>
+            </div>
+
+            
+        <!-- <div class="add-device"> -->
+
+        
+            
+          <!-- <div class="add-device-bg"> -->
+            <!-- <div class="hellow-text" style="margin-top: 30px;">
               你好，小智
             </div>
             <div class="hellow-text">
@@ -18,18 +33,11 @@
             </div>
             <div class="hi-hint">
               Hello, Let's have a wonderful day!
-            </div>
-            <div class="add-device-btn">
-              <div class="left-add" @click="showAddDialog">
-                添加智能体
-              </div>
-              <div style="width: 23px;height: 13px;background: #5778ff;margin-left: -10px;" />
-              <div class="right-add">
-                <i class="el-icon-right" @click="showAddDialog" style="font-size: 20px;color: #fff;" />
-              </div>
-            </div>
-          </div>
-        </div>
+            </div> -->
+
+           
+          <!-- </div> -->
+        <!-- </div> -->
         <div class="device-list-container">
           <template v-if="isLoading">
             <div v-for="i in skeletonCount" :key="'skeleton-' + i" class="skeleton-item">
@@ -248,7 +256,7 @@ export default {
 .add-device-btn {
   display: flex;
   align-items: center;
-  margin-left: 75px;
+  margin-left: 0; /* 原为75px，改为0实现左对齐 */
   margin-top: 15px;
   cursor: pointer;
 
@@ -280,7 +288,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 30px;
-  padding: 30px 0;
+  padding: 30px 0 30px 0; /* 左侧padding由30px改为0，实现左对齐 */
 }
 
 /* 在 DeviceItem.vue 的样式中 */

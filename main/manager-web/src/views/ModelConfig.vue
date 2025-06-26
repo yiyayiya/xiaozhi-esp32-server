@@ -509,8 +509,7 @@ export default {
     linear-gradient(120deg,
       rgba(107, 140, 255, 0.3) 0%,
       rgba(169, 102, 255, 0.3) 25%,
-      transparent 60%),
-    url("../assets/model/model.png") no-repeat center / cover;
+      transparent 60%);
   padding: 16px 0;
   flex-shrink: 0;
   display: flex;

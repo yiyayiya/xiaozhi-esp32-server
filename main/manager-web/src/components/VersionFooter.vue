@@ -2,7 +2,7 @@
   <div class="copyright">
     <div class="footer-content">
       <!-- <span>{{ year }} {{ name }} {{ version }}</span> -->
-      <span>Power by LLMToy</span>
+      <span>power by LLMToy</span>
       <template v-if="beianGaNum !== 'null'">
         <span v-if="beianIcpNum !== 'null' || name">|</span>
         <a :href="'http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=' + beianGaNum" target="_blank"

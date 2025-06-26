@@ -6,6 +6,7 @@
         style="width: 40px;height: 40px;border-radius: 50%;background: #5778ff;display: flex;align-items: center;justify-content: center;">
         <img loading="lazy" src="@/assets/home/equipment.png" alt="" style="width: 18px;height: 15px;" />
       </div>
+      
       添加智能体
     </div>
     <div style="height: 1px;background: #e8f0ff;" />

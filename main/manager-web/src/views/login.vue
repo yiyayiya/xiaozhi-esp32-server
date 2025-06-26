@@ -6,9 +6,9 @@
           <span class="llmtoy-logo">LLMToy</span>
         </div>
       </el-header>
-      <div class="login-person">
+      <!-- <div class="login-person">
         <img loading="lazy" alt="" src="@/assets/login/login-person.png" style="width: 100%;" />
-      </div>
+      </div> -->
       <el-main style="position: relative;">
         <div class="login-box" @keyup.enter="login">
           <div style="display: flex;align-items: center;gap: 20px;margin-bottom: 39px;padding: 0 30px;">
