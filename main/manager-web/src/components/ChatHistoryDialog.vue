@@ -21,8 +21,8 @@
                             {{ message.content }}
                         </div>
                         <div v-else class="message-item" :class="{ 'user-message': message.chatType === 1 }">
-                            <img :src="message.chatType === 1 ? getUserAvatar(currentSessionId) : require('@/assets/xiaozhi-logo.png')"
-                                class="avatar" />
+                            <!-- <img :src="message.chatType === 1 ? getUserAvatar(currentSessionId) : require('@/assets/xiaozhi-logo.png')"
+                                class="avatar" /> -->
                             <div class="message-content">
                                 {{ message.content }}
                                 <i v-if="message.audioId" :class="getAudioIconClass(message)"
