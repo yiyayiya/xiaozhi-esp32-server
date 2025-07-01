@@ -3,7 +3,9 @@
     <div class="header-container">
       <!-- 左侧元素 -->
       <div class="header-left" @click="goHome">
-        <span class="llmtoy-logo">LLMToy</span>
+         <img loading="lazy" alt="" src="@/assets/xiaozhi-ai.png" class="brand-img" />
+
+         <!-- <span class="llmtoy-logo">LLMToy</span> -->
       </div>
 
       <!-- 中间导航菜单 -->
