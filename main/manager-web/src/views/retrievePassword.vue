@@ -5,7 +5,7 @@
       <el-header>
         <div style="display: flex;align-items: center;margin-top: 15px;margin-left: 10px;gap: 10px;">
           <!-- <span class="llmtoy-logo">LLMToy</span> -->
-          <img loading="lazy" alt="" src="@/assets/xiaozhi-ai.png" style="height: 18px;" />
+          <img loading="lazy" alt="" src="@/assets/xiaozhi-ai.png" style="height: 36px;" />
 
         </div>
       </el-header>

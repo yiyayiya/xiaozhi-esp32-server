@@ -5,7 +5,7 @@
         <div style="display: flex;align-items: center;margin-top: 15px;margin-left: 10px;gap: 10px;">
            <!-- <img loading="lazy" alt="" src="@/assets/xiaozhi-ai.png" class="brand-img" /> -->
 
-           <img loading="lazy" alt="" src="@/assets/xiaozhi-ai.png" style="height: 18px;" />
+           <img loading="lazy" alt="" src="@/assets/xiaozhi-ai.png" style="height: 36px;" />
 
           <!-- <span class="llmtoy-logo">LLMToy</span> -->
         </div>
